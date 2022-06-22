@@ -1,7 +1,12 @@
 
 
 ### Explicando sobre a arquitetura penso que a solução mais interessante para um início de projeto seria:
-
+| Camada  |  Descrição  |
+| ------------------- | ------------------- |
+|  API |  Enxerga somente a Application |
+|  Application |  Enxerga Infra e Model |
+|  Infra |  Enxerga apenas Model |
+|  Model |  Pode ser visto por todas as outras |
 
 A responsabilidade da API é simplesmente receber uma requisição e encaminhá-la para a camada Application (ou aplicação). 
 Tem como responsabilidade também de validar o ModelState de entrada. 
