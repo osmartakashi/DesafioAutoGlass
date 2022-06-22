@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "DesafioAutoGlass\Api.csproj", "{8E7E314D-F90C-48CB-878F-ABEBA1D4F028}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{0E0EEDA4-CE40-439C-BFEB-E9D7CBCF2AB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{582DDAA1-EC6A-4B76-9310-81B5C76C1A1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{6245AC6B-C352-4D6D-9C09-0CC69AFB4F7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{EA42954A-EDA3-4ECA-A9BD-58466A4DFD72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraTestes", "ProdutoControllerTests\InfraTestes.csproj", "{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CD62892-3FBF-4C3C-B2C4-16193C0E01CA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\osmar\Downloads\DesafioAutoglass.postman_collection.json = ..\..\Users\osmar\Downloads\DesafioAutoglass.postman_collection.json
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E7E314D-F90C-48CB-878F-ABEBA1D4F028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7E314D-F90C-48CB-878F-ABEBA1D4F028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7E314D-F90C-48CB-878F-ABEBA1D4F028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7E314D-F90C-48CB-878F-ABEBA1D4F028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0EEDA4-CE40-439C-BFEB-E9D7CBCF2AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0EEDA4-CE40-439C-BFEB-E9D7CBCF2AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0EEDA4-CE40-439C-BFEB-E9D7CBCF2AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0EEDA4-CE40-439C-BFEB-E9D7CBCF2AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582DDAA1-EC6A-4B76-9310-81B5C76C1A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582DDAA1-EC6A-4B76-9310-81B5C76C1A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582DDAA1-EC6A-4B76-9310-81B5C76C1A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582DDAA1-EC6A-4B76-9310-81B5C76C1A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA42954A-EDA3-4ECA-A9BD-58466A4DFD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA42954A-EDA3-4ECA-A9BD-58466A4DFD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA42954A-EDA3-4ECA-A9BD-58466A4DFD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA42954A-EDA3-4ECA-A9BD-58466A4DFD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC29CFA6-9D9E-4481-A1AA-48617BF82ED8} = {6245AC6B-C352-4D6D-9C09-0CC69AFB4F7F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F089CA7E-5C05-4B72-873A-6BC843B1CA80}
+	EndGlobalSection
+EndGlobal
