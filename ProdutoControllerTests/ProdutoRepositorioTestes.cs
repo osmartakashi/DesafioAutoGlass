@@ -35,6 +35,27 @@ namespace InfraTestes
             Assert.IsTrue(produtos.Count() == 2);       
         }
 
+        [TestCase("Parabrisa",1,3)]
+        [TestCase("Espelho", 1, 3)]
+        public void MetodoFiltrarDeveFiltrarPorParametrosDistintos(string filtro, int pagina, int itensPorPagina)
+        {
+            var produtos = _repositorio.Filtrar(new Models.Dtos.ProdutoDtos.SelectProdutoDto
+            {
+                Descricao = filtro
+            }, pagina, itensPorPagina);
+            Assert.IsTrue(produtos.Any());
+        }
+
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        public void MetodoObterPorCodigoDeveRetornarUmProduto(int codigo)
+        {
+            var produto = _repositorio.ObterPorCodigo(codigo);
+            Assert.IsNotNull(produto);
+        }
+
+
         private void SeedDatabase()
         {
             var context = new DataContext(dbContextOptions);
