@@ -1,80 +1,44 @@
-Este desafio consistiu nos seguintes requisitos:
 
-Você irá criar API para a gestão de produtos, com os seguintes recursos:
-•	Recuperar um registro por código;
-•	Listar registros 
- 	Filtrando a partir de parâmetros e paginando a resposta
-•	Inserir 
-Criar validação para o campo data de fabricação que não poderá ser maior ou igual a data de validade.
-•	Editar
-Criar validação para o campo data de fabricação que não poderá ser maior ou igual a data de validade.
-•	Excluir 
-A exclusão deverá ser lógica, atualizando o campo situação com o valor Inativo.
-Campos no escopo de produtos são
-•	Código do produto (sequencial e não nulo)
-•	Descrição do produto (não nulo)
-•	Situação do produto (Ativo ou Inativo)
-•	Data de fabricação
-•	Data de validade
-•	Código do fornecedor
-•	Descrição do fornecedor
-•	CNPJ do fornecedor
-Requisitos
-Obrigatório
-•	Construir a Web-api em dotnet core ou dotnet 5.
-•	Construir a estrutura em camadas e em DDD.
-Diferenciais
-•	Utilizar ORM
-•	Utilizar a biblioteca Automapper para fazer o mapeamento entity-DTO.
-•	Fazer teste unitários
 
-===================================================================================================================
-Explicando sobre a arquitetura penso que a solução mais interessante para um início de projeto seria:
+### Explicando sobre a arquitetura penso que a soluÃ§Ã£o mais interessante para um inÃ­cio de projeto seria:
 
-----------------------|---|
-|API                  | M |
-|---------------------| O |
-|Application          | D |
-|---------------------| E |
-|Infra                | L |
-|---------------------|---|
 
-A responsabilidade da API é simplesmente receber uma requisição e encaminhá-la para a camada Application (ou aplicação). 
-Tem como responsabilidade também de validar o ModelState de entrada. 
+A responsabilidade da API Ã© simplesmente receber uma requisiÃ§Ã£o e encaminhÃ¡-la para a camada Application (ou aplicaÃ§Ã£o). 
+Tem como responsabilidade tambÃ©m de validar o ModelState de entrada. 
 
-A responsabilidade da camada Application é referente às regras de negócio quando houver. Um exemplo é utilizar-se do padrão
-Specification para validar regras de negócio ou mesmo fazer validações. Para esse exercício esta camada simplesmente
+A responsabilidade da camada Application Ã© referente Ã s regras de negÃ³cio quando houver. Um exemplo Ã© utilizar-se do padrÃ£o
+Specification para validar regras de negÃ³cio ou mesmo fazer validaÃ§Ãµes. Para esse exercÃ­cio esta camada simplesmente
 faz o mapeamento utilizando o AutoMapper dos modelos de entrada para o modelo conhecido do nosso DataContext.
 
-A camada de Infra é basicamente comportar todos os tipos de serviços de infra-estrutura. Costumo utilizar essa camada 
-para armazenar os repositórios de dados já que de fato, há uma comunicação com o banco de dados, o que considero um componente de infra.
+A camada de Infra Ã© basicamente comportar todos os tipos de serviÃ§os de infra-estrutura. Costumo utilizar essa camada 
+para armazenar os repositÃ³rios de dados jÃ¡ que de fato, hÃ¡ uma comunicaÃ§Ã£o com o banco de dados, o que considero um componente de infra.
 
-Por fim a camada de domínio (Model) estão as classes de domínio do sistema. Nessa camada coloquei tanto os DTO´s quanto as
-classe de domínio e que são utilizadas pelo DataContext. Criei também um validador customizado para validar 
-se a data de fabricação é maior do que a data de validade. 
-Nesse validador verifico qual o tipo que está sendo passado tornando-o genérico o suficiente para atender essa demanda.
+Por fim a camada de domÃ­nio (Model) estÃ£o as classes de domÃ­nio do sistema. Nessa camada coloquei tanto os DTOÂ´s quanto as
+classe de domÃ­nio e que sÃ£o utilizadas pelo DataContext. Criei tambÃ©m um validador customizado para validar 
+se a data de fabricaÃ§Ã£o Ã© maior do que a data de validade. 
+Nesse validador verifico qual o tipo que estÃ¡ sendo passado tornando-o genÃ©rico o suficiente para atender essa demanda.
 
-====================================================================================================================
 
-Testes unitários:
 
-- Testes unitários são excelentes para se testar rapidamente se um determinado compomente está funcionando de acordo.
-Existem duas abordagens quando o tema é testes: O primeiro seria a cobertura do código com testes e a segunda seria o
+Testes unitÃ¡rios:
+
+- Testes unitÃ¡rios sÃ£o excelentes para se testar rapidamente se um determinado compomente estÃ¡ funcionando de acordo.
+Existem duas abordagens quando o tema Ã© testes: O primeiro seria a cobertura do cÃ³digo com testes e a segunda seria o
 desenvolvimendo usando TDD ou mesmo BDD.
-Para este exercício fiz um teste de repositório utilizando-se um banco em memória apenas para fins de testes. 
+Para este exercÃ­cio fiz um teste de repositÃ³rio utilizando-se um banco em memÃ³ria apenas para fins de testes. 
 Pode-se expandir os testes para outras camadas mas acredito que isso vai de acordo com a necessidade.
 
-=====================================================================================================================
 
-Para rodar a aplicação:
- - Pegar a collection do postman que está junto do projeto e importar no Postman.
- - Rodar a migration para inicializar o banco de dados. O banco é o SQL Server express (.\sqlexpress)
+
+Para rodar a aplicaÃ§Ã£o:
+ - Pegar a collection do postman que estÃ¡ junto do projeto e importar no Postman.
+ - Rodar a migration para inicializar o banco de dados. O banco Ã© o SQL Server express (.\sqlexpress)
    Abrir o console do Package-Manager e rodar: Add-Migration SeedDatabase, se der tudo certo rode: update-database
 
-=====================================================================================================================
-Documentação:
 
-- A documentação foi feita utilizando-se o swagger e adicionando as descrições do que cada endpoint faz. Acredito que
-essa é a melhor solução para documentar API`s de uma maneira geral.
+DocumentaÃ§Ã£o:
+
+- A documentaÃ§Ã£o foi feita utilizando-se o swagger e adicionando as descriÃ§Ãµes do que cada endpoint faz. Acredito que
+essa Ã© a melhor soluÃ§Ã£o para documentar API`s de uma maneira geral.
 
 Obrigado!
