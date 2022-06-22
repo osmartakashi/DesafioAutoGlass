@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "2b5880ae-a01f-47cf-b169-b0018800d738",
+		"name": "DesafioAutoglass",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2243084"
+	},
+	"item": [
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44314/api/produto/listar?pagina=1&itensPorPagina=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44314",
+							"path": [
+								"api",
+								"produto",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "1"
+								},
+								{
+									"key": "itensPorPagina",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"descricao\" : \"Parabrisa ford focus 16v\",\r\n    \"situacao\" : \"Ativo\",\r\n    \"DataFabricacao\" : \"2020-10-10\",\r\n    \"DataValidade\" : \"2023-08-10\",\r\n    \"codigoFornecedor\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44314/api/produto/novo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44314",
+							"path": [
+								"api",
+								"produto",
+								"novo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"descricao\" : \"Parabrisa ford focus 16v\",\r\n    \"pagina\": 1,\r\n    \"itensPorPagina\" : 5\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44314/api/produto/filtrar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44314",
+							"path": [
+								"api",
+								"produto",
+								"filtrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"codigoProduto\": 1,\r\n        \"descricao\": \"Parabrisa ford focus 16v\",\r\n        \"situacao\": \"Ativo\",\r\n        \"dataFabricacao\": \"2020-10-10T00:00:00\",\r\n        \"dataValidade\": \"2023-10-10T00:00:00\",\r\n        \"codigoFornecedor\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44314/api/produto/editar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44314",
+							"path": [
+								"api",
+								"produto",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"codigoProduto\": 1,\r\n        \"descricao\": \"Parabrisa ford focus 16v\",\r\n        \"situacao\": \"Ativo\",\r\n        \"dataFabricacao\": \"2020-10-10T00:00:00\",\r\n        \"dataValidade\": \"2023-10-10T00:00:00\",\r\n        \"codigoFornecedor\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44314/api/produto/excluir",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44314",
+							"path": [
+								"api",
+								"produto",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
