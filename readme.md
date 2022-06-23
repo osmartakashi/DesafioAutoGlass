@@ -3,7 +3,7 @@
 ### Explicando sobre a arquitetura penso que a solução mais interessante para um início de projeto seria:
 | Camada  |  Descrição  |
 | ------------------- | ------------------- |
-|  API |  Enxerga somente a Application |
+|  API |  Enxerga a Application e Models |
 |  Application |  Enxerga Infra e Model |
 |  Infra |  Enxerga apenas Model |
 |  Model |  Pode ser visto por todas as outras |
